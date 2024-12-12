@@ -51,9 +51,7 @@ def find_in_text(text, keywords):
             current_node = root
             continue
 
-        # Move to the next node based on current character
         current_node = current_node.children[char]
-        # Record matches found at this position
         for keyword in current_node.output:
             result[keyword].append(i - len(keyword) + 1)
 
